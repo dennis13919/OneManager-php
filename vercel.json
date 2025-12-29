@@ -1,13 +1,17 @@
 {
   "functions": {
-    "index.php": {
-      "runtime": "vercel-php@0.7.2"
+    "api/index.php": {
+      "runtime": "vercel-php@0.7.2",
+      "env": {
+        "display_errors": "On",
+        "display_startup_errors": "On"
+      }
     }
   },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.php"
+      "dest": "/api/index.php"
     }
   ]
 }
